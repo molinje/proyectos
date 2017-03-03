@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 
@@ -11,6 +12,7 @@ import { LoginPage } from '../login/login';
 export class Page1 {
 
   constructor(public navCtrl: NavController) {
+    window.localStorage.removeItem('user');
      
 
     if(!this.isAlreadyLoggedIn()){
